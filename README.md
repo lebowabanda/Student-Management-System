@@ -1,142 +1,199 @@
 # Student Management System
 
-## 1. Project Overview
+**A RESTful Web API built with C# and ASP.NET Core Web API**
 
-The **Student Management System** is a web-based application designed to simplify and improve the way student information is managed within an educational institution.
+<escape>🚧</escape> **Project Status:** In Development
 
-The system aims to provide a centralized platform where administrators and authorized users can efficiently manage student records, access student information, and maintain accurate academic and personal details.
+## About the Project
 
-By replacing manual record-keeping and scattered information with a structured digital solution, the system aims to reduce administrative workload, minimize errors, improve data organization, and make student information easier to access and maintain.
+The Student Management System is a backend development project I am building to improve how student information is stored and managed within an educational institution.
 
-The project is being developed using **ASP.NET Core Web API** with a focus on creating a secure, reliable, maintainable, and scalable backend application.
+The idea behind this project is simple: create a system where student records can be managed through a structured API instead of relying on manual record-keeping.
 
-## 2. Project Objectives
+I chose this project because I wanted to move beyond writing small code examples and start building something practical that reflects how backend applications are developed in real-world environments.
 
-The main objectives of the Student Management System are to:
+I am using C#, ASP.NET Core Web API and .NET 10 to build the application. My main focus is understanding how to design API endpoints, organize application code, handle data and follow good software development practices.
 
-- Centralize student information in one system.
-- Simplify the process of registering and managing students.
-- Allow authorized users to create, view, update, and delete student records.
-- Improve the accuracy and consistency of student information.
-- Reduce paperwork and manual administrative processes.
-- Provide a structured foundation for future academic management features.
-- Build a system that can be extended as the institution's needs grow.
+This is an ongoing learning project, and I am developing it step by step as I improve my backend development skills.
 
-## 3. Key Features
+## What I Want to Achieve
 
-The system is intended to support the following functionality:
+The main goal is to build a functional Student Management System that can:
 
-### Student Management
 - Register new students.
-- View a list of registered students.
-- View individual student details.
-- Update student information.
-- Remove student records when necessary.
+- Retrieve all registered students.
+- Retrieve an individual student using their ID.
+- Update existing student information.
+- Delete student records.
+- Store and manage student information efficiently.
 
-### Student Information
-- Store personal information.
-- Maintain contact details.
-- Manage student identification and registration information.
-- Keep student records organized and accessible.
+Beyond the functionality, I also want to understand how different parts of a backend application work together, from receiving HTTP requests to processing data and returning appropriate responses.
 
-### Future Enhancements
-Additional functionality may be introduced as the project develops, including:
+## Technologies Used
 
-- User authentication and authorization.
-- Role-based access for administrators and staff.
-- Course and subject management.
-- Student enrollment management.
-- Academic results and performance tracking.
-- Attendance management.
-- Reporting and analytics.
-
-## 4. Technology Stack
-
-The project uses the following technologies:
-
-| Technology | Purpose |
+| Technology | How I Use It |
 |---|---|
-| C# | Backend programming language |
-| ASP.NET Core Web API | Building RESTful API endpoints |
-| .NET 10 | Application development framework |
-| SQL Server | Planned database for storing student information |
+| C# | Writing the backend application logic |
+| .NET 10 | Framework for building the application |
+| ASP.NET Core Web API | Creating REST API endpoints |
+| SQL Server | Planned database integration |
 | Entity Framework Core | Planned database access and management |
-| Visual Studio Code | Development environment |
-| Git | Version control |
-| GitHub | Source code hosting and collaboration |
+| Visual Studio Code | Writing and managing code |
+| Git | Tracking changes during development |
+| GitHub | Hosting and managing the project repository |
 
-## 5. Project Architecture
+## Project Structure
 
-The application follows a structured approach that separates responsibilities into different layers and components.
+I am keeping the project organized by separating different responsibilities into their own folders.
 
 ```text
 StudentManagement.Api/
 │
-├── Controllers/    # Handles incoming HTTP requests
-├── DTOs/           # Defines data transfer objects
-├── Entities/       # Contains application data models
-├── Data/           # Database context and configurations
-├── Services/       # Contains business logic
-├── Middleware/     # Handles cross-cutting HTTP concerns
+├── Controllers/
 │
-├── Program.cs      # Application configuration and startup
+├── DTOs/
+│
+├── Entities/
+│
+├── Data/
+│
+├── Services/
+│
+├── Middleware/
+│
+├── Program.cs
 └── appsettings.json
 ```
 
-This structure promotes maintainability, readability, and separation of concerns.
+### Understanding the Structure
 
-## 6. Getting Started
+As the application grows, I am using the following organization:
 
-### Prerequisites
+- **Controllers:** Responsible for handling HTTP requests and returning responses.
+- **DTOs:** Used to define what data is received and returned by the API.
+- **Entities:** Represent the main data models used by the application.
+- **Data:** Will contain database-related configuration and the database context.
+- **Services:** Will contain business logic, keeping controllers focused on handling requests.
+- **Middleware:** Provides a place for handling application-wide HTTP concerns.
+- **Program.cs:** Configures and starts the application.
 
-Before running the project, ensure that you have installed:
+I am following this structure to keep the code readable, organized and easier to maintain.
+
+## Development Progress
+
+I am building the application incrementally rather than trying to implement every feature at once.
+
+My development roadmap includes:
+
+- [x] Create the ASP.NET Core Web API project.
+- [ ] Create the Student entity.
+- [ ] Implement student registration.
+- [ ] Implement retrieving all students.
+- [ ] Implement retrieving a student by ID.
+- [ ] Implement updating student information.
+- [ ] Implement deleting student records.
+- [ ] Add request validation.
+- [ ] Integrate SQL Server using Entity Framework Core.
+- [ ] Implement proper exception handling.
+- [ ] Add unit tests.
+- [ ] Configure API documentation with Swagger.
+
+*Note: The checklist should be updated as features are actually completed.*
+
+## Running the Project Locally
+
+If you want to explore or run the project on your local machine, follow these steps.
+
+### Requirements
 
 - .NET 10 SDK
-- Visual Studio Code
-- C# Dev Kit extension for Visual Studio Code
+- Visual Studio Code or another compatible IDE
 - Git
-- SQL Server (when database functionality is implemented)
+- C# Dev Kit extension (recommended)
 
-### Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/student-management-system.git
 ```
 
-### Navigate to the Project
+### 2. Navigate to the Project
 
 ```bash
 cd student-management-system/StudentManagement.Api
 ```
 
-### Restore Dependencies
+### 3. Restore Dependencies
 
 ```bash
 dotnet restore
 ```
 
-### Build the Application
+### 4. Build the Application
 
 ```bash
 dotnet build
 ```
 
-### Run the Application
+### 5. Run the Application
 
 ```bash
 dotnet run
 ```
 
-The API will start using the local development URL displayed in the terminal.
+The application will start at the development URL displayed in your terminal.
 
-## 7. Project Goals
+If Swagger is configured, you can use the Swagger interface to explore and test the API endpoints.
 
-The long-term goal is to develop a complete Student Management System that provides an efficient and reliable way to manage student information and academic administration.
+## What I Am Learning
 
-The application will be developed incrementally, starting with the core student management functionality and gradually introducing additional features as the project evolves.
+Building this project is helping me understand the practical side of backend development.
 
-## 8. Conclusion
+Some of the concepts I am working on include:
 
-The Student Management System is intended to make student administration more efficient through technology. By providing a centralized and structured way to manage student records, the system will help improve information accuracy, accessibility, and overall administrative efficiency.
+- Building RESTful APIs using ASP.NET Core.
+- Understanding HTTP methods and status codes.
+- Applying object-oriented programming in C#.
+- Organizing code using controllers, services and DTOs.
+- Understanding dependency injection.
+- Working with data models.
+- Learning database integration with Entity Framework Core.
+- Using Git to manage changes and track development progress.
+- Writing code that is easier to read, understand and maintain.
 
-This project also serves as an opportunity to apply software development principles, REST API design, database integration, and clean code practices while building a practical real-world application.
+I believe understanding the reasoning behind the code is just as important as getting the application to work.
+
+## Future Improvements
+
+Once the core student management functionality is complete, I plan to extend the application with:
+
+- User registration and authentication.
+- Role-based authorization for administrators and staff.
+- Course and subject management.
+- Student enrollment.
+- Academic results management.
+- Attendance tracking.
+- Search and filtering.
+- Automated testing.
+
+These improvements will allow me to explore more advanced backend development concepts as the project progresses.
+
+## Why I Built This Project
+
+I built this project as part of my journey towards becoming a professional backend developer.
+
+I wanted to work on something practical where I could apply what I have learned, encounter real development challenges and improve my problem-solving skills.
+
+I understand that becoming a good developer takes more than knowing a programming language. It requires understanding how applications are structured, how data flows through a system, how to solve problems and how to write code that other developers can work with.
+
+That is exactly what I want to develop through this project.
+
+I am continuously learning, improving and adding functionality as my understanding grows.
+
+---
+
+**Developer:** Junior Backend Developer
+
+**Primary Focus:** C# | ASP.NET Core Web API | Backend Development
+
+**Project Status:** In Development
