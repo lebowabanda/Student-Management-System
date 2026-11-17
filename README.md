@@ -2,7 +2,7 @@
 
 **A RESTful Web API built with C# and ASP.NET Core Web API**
 
-<escape>🚧</escape> **Project Status:** In Development
+<escape></escape> **Project Status:** In Development
 
 ## About the Project
 
